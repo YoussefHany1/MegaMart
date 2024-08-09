@@ -1,0 +1,87 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk";
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    background-color: #008ECC;
+    width: 790px;
+    height: 535px;
+    margin: auto;
+    transform: translateY(30%);
+    overflow: hidden;
+    border-radius: 16px;
+}
+.parent::before{
+    content: "";
+    background-color: #0c9bda;
+    width: 434.49px;
+    height: 434.49px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -103px;
+    right: -103px;
+    border: 15px solid #008ECC;
+    outline: 2px solid #0c9bda;
+    z-index: -1;
+}
+.parent .logo{
+    text-align: center;
+}
+.parent img{
+    width: 200px;
+}
+.parent h1{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 35px;
+    margin-top: 65px;
+}
+.parent form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.parent input{
+    height: 45px;
+    border-radius: 14px;
+    outline: none;
+    border: none;
+    width: 500px;
+}
+.parent form button, .parent form input{
+    margin: 15px;
+}
+.parent form button{
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 14px;
+    font-size: 19px;
+    background-color: #0e4d93;
+    color: white;
+    font-weight: 500;
+    top: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.parent input[type=email], .parent input[type=password]{
+    padding-left: 20px;
+    font-weight: 500;
+}
+.parent .signup{
+    margin-right: 278px;
+    color: white;
+}
+.parent .signup a{
+    text-decoration: none;
+    color: #0e4d93;
+    font-weight: 700;
+}

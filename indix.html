@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> My First project</title>
+        <link rel="stylesheet" href="first.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+
+    </head>
+    <body>
+        <div class="top">
+            <div>Welcome to worldwide Megamart!</div>
+            <a href="#"><i class="fa-solid fa-location-dot"></i> Deliver to 423651</a>
+            <a href="#" class="border"><i class="fa-solid fa-truck-fast"></i> Track</a>
+            <a href="#"><i class="fa-solid fa-certificate"></i> All Offers</a>
+        </div>
+        <div class="parent">
+            <div class="toptwo">
+                <div class="menu">
+                    <div class="Sidenav" id="mySidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-x"></i></a>
+                        <a href="#">Wishlist</a>
+                        <a href="#">Your Account</a>
+                        <a href="#">Help</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><span class="btn"><i class="fa-solid fa-bars"></i></span></span>
+                    
+                </div>
+                <div class="logo"><img src="img\Megamart.png" alt="website logo"></div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search essentials, groceries and more..."></input>
+                </div>
+                <div class="sign">
+                    <div><a href="sign-up\sign-in.html"><i class="fa-regular fa-user"></i> Sign Up/Sign In</a></div>
+                </div>
+                <div class="cart">
+                    <div><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="dropdown">
+                    <button class="gro-btn">Groceries <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">Bakery and Bread</a>
+                        <a href="#">Meat and Seafood</a>
+                        <a href="#">Pasta and Rice</a>
+                        <a href="#">Soups and Canned Goods</a>
+                        <a href="#">Frozen Foods</a>
+                        <a href="#">Dairy, Cheese, and Eggs</a>
+                        <a href="#">Snacks and Crackers</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="pr-btn">Premium Fruits <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">apples and pears.</a>
+                        <a href="#">Mango</a>
+                        <a href="#">Watrmelon</a>
+                        <a href="#">Lemon</a>
+                        <a href="#">Orange</a>
+                        <a href="#">Banana</a>
+                        <a href="#">Kiwi</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="home-btn">Home & Kitchen <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">Home Appliances</a>
+                        <a href="#">Large Appliances</a>
+                        <a href="#">Cookware</a>
+                        <a href="#">Drinkware</a>
+                        <a href="#">Bath & Bedding</a>
+                        <a href="#">Tools & Home Improvement</a>
+                        <a href="#">Home Decor</a>
+                        <a href="#">Kitchen & Dining</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="fash-btn">Fashion <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">Men's Clothing</a>
+                        <a href="#">Women's Clothing</a>
+                        <a href="#">Kid's Fashion</a>
+                        <a href="#">Footwear</a>
+                        <a href="#">Eyewear</a>
+                        <a href="#">Bags & luggage</a>
+                        <a href="#">Watches</a>
+                        <a href="#">Jewellery</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="elec-btn">Electronics <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">TVs, Satellites & Accessories</a>
+                        <a href="#">Laptops & Accessories</a>
+                        <a href="#">Audio & Home Entertainment</a>
+                        <a href="#">Video Games</a>
+                        <a href="#">Cameras & Accessories</a>
+                        <a href="#">Printers & Accessories</a>
+                        <a href="#">Networking Products</a>
+                        <a href="#">Data Storage</a>
+                        <a href="#">Computer Components</a>
+                        <a href="#">Computer Accessories</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="beauty-btn">Beauty <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">Fragrance</a>
+                        <a href="#">Makeup</a>
+                        <a href="#">Hair Care</a>
+                        <a href="#">Skin Care</a>
+                        <a href="#">Personal Care</a>
+                        <a href="#">Health & Nutrition</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="impro-btn">Home Improvement <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">Roof</a>
+                        <a href="#">Paint</a>
+                        <a href="#">Landscaping</a>
+                        <a href="#">Floor</a>
+                        <a href="#">Cleaners</a>
+                        <a href="#">Lighting</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="sport-btn">Sports, Toys & Luggage <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="links">
+                        <a href="#">Fitness & Strength</a>
+                        <a href="#">Yoga</a>
+                        <a href="#">Cardio</a>
+                        <a href="#">Water Sports</a>
+                        <a href="#">Team Sports</a>
+                        <a href="#">Combat Sports</a>
+                        <a href="#">Hunting & Fishing</a>
+                        <a href="#">Skates & Scooters</a>
+                        <a href="#">Camping & Outdoor</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ad">
+                <div class="slideshow">
+                    <div class="slide-wrapper">
+                        <img src="img\watch\Untitled-1.png" class="image-slide" alt="Watch">
+                        <img src="img\watch\Untitled-2.png" class="image-slide" alt="Samsung">
+                        <img src="img\watch\Untitled-3.png" class="image-slide" alt="Skin Care">
+                        <img src="img\watch\Untitled-4.png" class="image-slide" alt="Washing Machine">
+                        <img src="img\watch\Untitled-5.png" class="image-slide" alt="Sofas">
+                    </div>
+                </div>
+                <div class="js"></div>
+                <div class="arrow">
+                    <div class="back"><button onclick="plusDivs(-1)"><i class="fa-solid fa-chevron-left"></i></button></div>
+                    <div class="back"><button onclick="plusDivs(1)"><i class="fa-solid fa-chevron-right"></i></button></div>
+                </div>
+            </div>
+            <div class="first-cate">
+                <div class="header">
+                    <div class="border">Grab the best deal on <p class="color">Smartphones</p></div>
+                    <a href="#"><small>View All <i class="fa-solid fa-chevron-right"></i></small></a>
+                </div>
+                <div class="phones">
+                    <div class="phone"><img src="img\smartphones\S22.png" alt="Galaxy S22 Ultra">
+                        <div class="text">
+                            <div class="h"><p><a href="#">Galaxy S22 Ultra</a></p><br><b>43999 LE </b><del>49999 LE</del></div>
+                            <div class="save">Save - 6000 LE</div><div class="off">56% OFF</div></div>
+                    </div>
+                    <div class="phone"><img src="img\smartphones\M13.png" alt="Galaxy M13 (4GB | 64GB)">
+                        <div class="text">
+                            <div class="h"><p><a href="#">Galaxy M13 (4GB | 64GB)</a></p><br><b>8999 LE </b><del>13999 LE</del></div>
+                            <div class="save">Save - 5000 LE</div><div class="off">56% OFF</div></div>
+                    </div>
+                    <div class="phone"><img src="img\smartphones\M33.png" alt="Galaxy M33 (4GB | 64GB)">
+                        <div class="text">
+                            <div class="h"><p><a href="#">Galaxy M33 (8GB | 64GB)</a></p><br><b>10499 LE </b><del>12222 LE</del></div>
+                            <div class="save">Save - 1723 LE</div><div class="off">56% OFF</div></div>
+                    </div>
+                    <div class="phone"><img src="img\smartphones\M53.png" alt="Galaxy M53 (4GB | 64GB)">
+                        <div class="text">
+                            <div class="h"><p><a href="#">Galaxy M53 (4GB | 64GB)</a></p><br><b>15999 LE </b><del>20999 LE</del></div>
+                            <div class="save">Save - 5000 LE</div><div class="off">56% OFF</div></div>
+                    </div>
+                    <div class="phone"><img src="img\smartphones\S22ultra.png" alt="Galaxy S22 Ultra">
+                        <div class="text">
+                            <div class="h"><p><a href="#">Galaxy S22 Ultra</a></p><br><b>40999 LE </b><del>47999 LE</del></div>
+                            <div class="save">Save - 7000 LE</div><div class="off">56% OFF</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-cate">
+                <div class="header">
+                    <div class="border">Shop From <p class="color">Top Categories</p></div>
+                    <a href="#"><small>View All <i class="fa-solid fa-chevron-right"></i></small></a>
+                </div>
+                <div class="categories">
+                    <div class="cat">
+                        <div class="photo"><img src="img\top-categories\mobile.png" alt="Mobile"></div>
+                        <div class="text"><a href="#">Mobile</a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><img src="img\top-categories\cosmetics.png" alt="Cosmetics"></div>
+                        <div class="text"><a href="#">Cosmetics</a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><img src="img\top-categories\electronics.png" alt="Electronics"></div>
+                        <div class="text"><a href="#">Electronics</a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><img src="img\top-categories\furniture.png" alt="Furniture"></div>
+                        <div class="text"><a href="#">Furniture</a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><img src="img\top-categories\watches.png" alt="Watches"></div>
+                        <div class="text"><a href="#">Watches</a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><img src="img\top-categories\decor.png" alt="Decor"></div>
+                        <div class="text"><a href="#">Decor</a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><img src="img\top-categories\accessories.png" alt="Accessories"></div>
+                        <div class="text"><a href="#">Accessories</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="third-cate">
+                <div class="header">
+                    <div class="border">Top  <p class="color">Electronics Brands</p></div>
+                    <a href="#"><small>View All <i class="fa-solid fa-chevron-right"></i></small></a>
+                </div>
+                <div class="brands">
+                    <div class="brand">
+                        <a href="#" class="image"><img src="img\elec-brands\apple.png" alt="Apple"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\realme.png" alt="Realme"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\mi.png" alt="MI"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\samsung.png" alt="Samsung"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\oppo.png" alt="Oppo"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\huawei.png" alt="Huawei"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\infinix.png" alt="Infinix"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\honor.png" alt="Honor"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\oneplus.png" alt="One Plus"></a>
+                        <a href="#" class="image"><img src="img\elec-brands\vivo.png" alt="Vivo"></a>
+                    </div>
+                <div class="arrow">
+                    <div class="back"><button><i class="fa-solid fa-chevron-left"></i></button></div>
+                    <div class="forward"><button><i class="fa-solid fa-chevron-right"></i></button></div>
+                </div>
+                </div>
+            </div>
+            <div class="fourth-cate">
+                <div class="header">
+                    <div class="border">Daily <p class="color">Essentials</p></div>
+                    <a href="#"><small>View All <i class="fa-solid fa-chevron-right"></i></small></a>
+                </div>
+                <div class="categories">
+                    <div class="cat">
+                        <div class="photo"><a href="#"><img src="img\essentials\daily-essentials.png" alt="Daily-Essentials"></a></div>
+                        <div class="text"><a href="#">Daily Essentials<br><b>UP to 50% OFF</b></a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><a href="#"><img src="img\essentials\vegitables.png" alt="Vegitables"></a></div>
+                        <div class="text"><a href="#">Vegitables<br><b>UP to 50% OFF</b></a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><a href="#"><img src="img\essentials\fruits.png" alt="Fruits"></a></div>
+                        <div class="text"><a href="#">Fruits<br><b>UP to 50% OFF</b></a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><a href="#"><img src="img\essentials\strowberry.png" alt="Strowberry"></a></div>
+                        <div class="text"><a href="#">Strowberry<br><b>UP to 50% OFF</b></a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><a href="#"><img src="img\essentials\mango.png" alt="Mango"></a></div>
+                        <div class="text"><a href="#">Mango<br><b>UP to 50% OFF</b></a></div>
+                    </div>
+                    <div class="cat">
+                        <div class="photo"><a href="#"><img src="img\essentials\cherry.png" alt="Cherry"></a></div>
+                        <div class="text"><a href="#">Cherry<br><b>UP to 50% OFF</b></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="first-column">
+                    <div class="logo"><img src="img\fotter\logo.png" alt="website logo"></div>
+                    <div class="size"><b>Contact US</b></div>
+                    <div class="whatsapp">
+                        <div class="text"><i class="fa-brands fa-whatsapp"></i> Whats App</div>
+                        <div class="num">+20 102-345-6789</div>
+                    </div>
+                    <div class="callus">
+                        <div class="text"><i class="fa-solid fa-phone-volume"></i> Call US</div>
+                        <div class="num">+20 102-345-6789</div>
+                    </div>
+                    <div class="app">
+                        <div class="text"><b>Download App</b></div>
+                        <div class="photos">
+                            <div><img src="img\fotter\apple.png" alt="APP Store" class="apple"></div>
+                            <div><img src="img\fotter\google.png" alt="Google Play" class="google"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-column">
+                    <div class="header">Most Popular Categories</div>
+                    <ul class="list">
+                        <li><a href="#">Staples</a></li>
+                        <li><a href="#">Beverages</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Home Care</a></li>
+                        <li><a href="#">Baby Care</a></li>
+                        <li><a href="#">Vegetables & Fruits</a></li>
+                        <li><a href="#">Snacks & Foods</a></li>
+                        <li><a href="#">Dairy & Bakery</a></li>
+                    </ul>
+                </div>
+                <div class="third-column">
+                    <div class="header">Customer Services</div>
+                    <ul class="list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">E-waste Policy</a></li>
+                        <li><a href="#">Cancellation & Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="down">
+                © 2024 All rights reserved. Reliance Retail Ltd.
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="java.js"></script>
+    </body>
+</html>
+

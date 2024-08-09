@@ -1,0 +1,843 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk";
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary: #008ECC;
+    --text: #666666;
+    --heading: #222222;
+    --light: #888888;
+    --border: #EDEDED;
+    --background1: #f5f5f5;
+    --background2: #F6F6FC;
+    --background3: #F3F9FB;
+    --yellow: #E3BC01;
+    --line: #D9D9D9;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary); 
+}
+i{
+    color: var(--primary);
+}
+.parent{
+    left: 120px;
+    right: 120px;
+    position: absolute;
+}
+.top{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--background1);
+    color: var(--text);
+}
+.top div:nth-of-type(1){
+    left: 120px;
+    position: absolute;
+}
+.top a{
+    right: 120px;
+    position: relative;
+    text-decoration: none;
+    color: var(--text);
+}
+.top i{
+    margin: 5px;
+}
+.top .border::before{
+    content: "";
+    margin: 15px;
+    border-left: 1px solid var(--line);
+}
+.top .border::after{
+    content: "";
+    border-right: 1px solid var(--line);
+    margin: 15px;
+}
+.toptwo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+}
+.toptwo .menu{
+    left: 0;
+    position: absolute;
+    top: 20px;
+}
+.toptwo .menu .btn{
+    width: 48px;
+    height: 48px;
+    background-color: var(--background1);
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    align-content: center;
+    left: 0;
+    position: absolute;
+}
+.toptwo .menu i{
+    font-size: 24px;
+}
+.toptwo .menu .Sidenav{
+    overflow-x: hidden;
+    position: fixed;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary);
+    height: 100%;
+    z-index: 1;
+    transition: 1s;
+    transition: 1s;
+    left: 0;
+    top: 0;
+}
+.toptwo .menu .Sidenav i{
+    color: black;
+}
+.toptwo .menu .Sidenav a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 27px;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition-duration: 0.3s;
+}
+.toptwo .menu .Sidenav a:hover{
+    padding-left: 15px;
+    transition-duration: 0.3s;
+}
+.toptwo .logo{
+    display: flex;
+    margin-left: 16px;
+    position: absolute;
+    left: 42px;
+}
+.toptwo .search{
+    width: 507px;
+    height: 48px;
+    background-color: var(--background1);
+    color: var(--primary);
+    border-radius: 10px;
+}
+.toptwo .search input{
+    height: 48px;
+    width: 380px;
+    background-color: var(--background1);
+    outline: none;
+    border: none;
+}
+.toptwo .search i{
+    margin: 0 10px 0 20px;
+    font-size: 24px;
+    vertical-align: text-top;
+    cursor: pointer;
+}
+.toptwo i:not(.toptwo .menu i, .toptwo .search i){
+    font-size: 24px;
+    margin: 0 10px;
+    vertical-align: text-top;
+}
+.toptwo .sign, .toptwo .cart{
+    font-weight: bold;
+    display: flex;
+    align-items: center
+}
+.toptwo .sign{
+    position: absolute;
+    right: 60px;
+}
+.toptwo .sign a, .toptwo .cart a{
+    text-decoration: none;
+    color: var(--text);
+}
+.toptwo .cart{
+    position: absolute;
+    right: 0;
+}
+.toptwo .sign::after{
+    content: "";
+    border-right: 1px solid var(--line);
+    margin: 20px;
+    height: 24px;
+    position: relative;
+    left: -4px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: -20px;
+}
+.nav i{
+    margin: 0px 9px;
+}
+.nav::before{
+    content: "";
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    position: absolute;
+    margin-top: -20px;
+}
+.nav::after{
+    content: "";
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    position: absolute;
+    margin-top: 55px;
+}
+.nav button{
+    background-color: var(--background3);
+    border: none;
+    border-radius: 25px;
+    padding-right: 5px;
+    padding-left: 15px;
+    height: 36px;
+    cursor: pointer;
+    color: var(--heading);
+}
+.nav .links{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.nav .links a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition-duration: 0.3s;
+}
+.links a:hover{
+    padding-left: 25px;
+    transition-duration: 0.3s;
+}
+.dropdown:hover .links{
+    display: block;
+}
+.nav button:hover{
+    color: white;
+    background-color: var(--primary);
+}
+.nav button:hover i{
+    color: white;
+}
+/* The End Of Nav */
+/* Start Of AD */
+.ad {
+    transform: translateY(57px);
+    display: flex;
+    justify-content: center;
+    height: 340px;
+    align-items: center;
+}
+.ad .slideshow{
+    width: 1201px;
+    height: 316px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.ad .slideshow img{
+    border-radius: 16px;
+    cursor: pointer;
+}
+.slide-wrapper {
+    width: 6005px;
+    display: flex;
+    /* -webkit-animation: slide 25s ease infinite; */
+}
+/* @-webkit-keyframes slide {
+    15% {margin-left: 0px;}
+    25% {margin-left: -1201px;}
+    35% {margin-left: -1201px;}
+    45% {margin-left: -2402px;}
+    55% {margin-left: -2402px;}
+    65% {margin-left: -3603px;}
+    75% {margin-left: -3603px;}
+    85% {margin-left: -4804px;}
+    95% {margin-left: -4804px;}
+} */
+.ad div:not(.arrow, .image-slide){
+    color: white;
+}
+.ad .js{
+    position: relative;
+    left: -470px;
+    top: 94px;
+}
+.ad .js span{
+    width: 8px;
+    height: 8px;
+    margin-right: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.ad .js span:hover{
+    background-color: #9ce1ff;
+    transition-duration: 0.3s;
+}
+.ad .arrow{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+}
+.ad .arrow i{
+    color: var(--primary);
+    font-size: 24px;
+}
+.ad .arrow button{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: var(--background3);
+    text-align: center;
+    align-content: center;
+    border: none;
+    cursor: pointer;
+}
+.ad .arrow .back, .ad .arrow .forward{
+    background-color: white;
+    width: 86px;
+    height: 86px;
+    z-index: 2;
+    position: relative;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+}
+/* End Of Watch */
+/* Start Of Smartphones Categorie */
+.first-cate .header{
+    display: flex;
+    color: var(--text);
+    position: relative;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    top: 153px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--border);
+}
+.first-cate .header .border::after {
+    content: "";
+    width: 383px;
+    height: 3px;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    display: block;
+    position: absolute;
+}
+.first-cate .header .color{
+    color: var(--primary);
+    display: ruby;
+}
+.first-cate .header small, .second-cate .header small, .third-cate .header small, .fourth-cate .header small{
+    font-size: 16px;
+    font-weight: initial;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.first-cate .header a, .second-cate .header a, .third-cate .header a, .fourth-cate .header a{
+    text-decoration: none;
+    color: var(--heading);
+}
+.first-cate .header small i, .second-cate .header small i, .third-cate .header small i, .fourth-cate .header small i{
+    margin-left: 5px;
+}
+.first-cate .header small:hover, .second-cate .header small:hover, .third-cate .header small:hover, .fourth-cate .header small:hover{
+    color: var(--primary);
+    transition-duration: 0.3s;
+}
+.phones{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px 0 50px;
+}
+.phones .phone{
+    background-color: var(--background1);
+    width: 227px;
+    height: 295px;
+    text-align: center;
+    margin-top: 21px;
+    border-radius: 16px;
+    position: relative;
+    top: 200px;
+    transition-duration: 0.4s;
+}
+.phones .phone img{
+margin-top: 15px;
+}
+.phones .phone .text .h a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--heading);
+}
+.phones .phone .text .h b, .phones .phone .text .h del{
+    position: relative;
+    top: -13px;
+    margin-right: 10px;
+}
+.phones .phone .text .h::after{
+    position: relative;
+    content: "";
+    border-bottom: 1px solid var(--border);
+    width: 201px;
+    display: block;
+    top: -6px;
+}
+.phones .phone .text{
+    background-color: white;
+    width: 225px;
+    height: 106px;
+    padding-left: 12px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+    text-align: left;
+    padding-top: 10px;
+    top: 188px;
+}
+.phones .phone .text .save{
+    color: #249B3E;
+    font-weight: 600;
+}
+.phones .phone .text .off{
+    text-align: center;
+    align-content: center;
+    content: "56% OFF";
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    width: 51px;
+    height: 53px;
+    background-color: var(--primary);
+    display: block;
+    position: absolute;
+    top: -188px;
+    right: -1px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.phones .phone:hover {
+    outline: 1px solid var(--primary);
+    box-shadow: 0px 0px 15px black;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+    
+}
+/* End Of Smartphones Categorie */
+/* Start Of Top Categorie */
+.second-cate .header{
+    display: flex;
+    color: var(--text);
+    position: relative;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    top: 289px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--border);
+}
+.second-cate .header .border::after {
+    content: "";
+    width: 284px;
+    height: 3px;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    display: block;
+    position: absolute;
+}
+.second-cate .header .color{
+    color: var(--primary);
+    display: ruby;
+}
+.second-cate .categories{
+    bottom: -329px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+    padding: 0px 50px 0 50px;
+}
+.second-cate .categories .cat .photo:hover{
+    outline: 1px solid var(--primary);
+    box-shadow: 0px 0px 15px black;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+}
+.second-cate .categories .cat .photo{
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    background-color: var(--background1);
+    align-content: center;
+    text-align-last: center;
+    transition-duration: 0.4s;
+}
+.second-cate .categories .cat .text{
+    margin-top: 27px;
+}
+.second-cate .categories .cat .text a{
+    font-weight: 500;
+    text-decoration: none;
+    color: black
+}
+
+/* End Of Top Categorie */
+/* Start Of Electronics Brands Categorie */
+
+.third-cate{
+    bottom: -446px;
+    position: relative;
+}
+.third-cate .header{
+    display: flex;
+    color: var(--text);
+    position: relative;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--border);
+}
+.third-cate .header .border::after {
+    content: "";
+    width: 246px;
+    height: 3px;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    display: block;
+    position: absolute;
+}
+.third-cate .header .color{
+    color: var(--primary);
+    display: ruby;
+}
+.third-cate .brands{
+    height: 207px;
+}
+.third-cate .brands .brand{
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    top: 75px;
+    width: 79%;
+    margin: auto;
+    align-items: center;
+    scrollbar-width: none;
+    height: 115%;
+}
+.third-cate .brands .brand .image{
+    border-radius: 16px;
+    margin-right: 15px;
+    margin-left: 15px;
+    z-index: 2;
+}
+.third-cate .brands .brand .image img{
+    border-radius: 16px;
+    transition-duration: 0.3s;
+}
+.third-cate .arrow{
+    transform: translateY(-100%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.third-cate .arrow i{
+    color: var(--primary);
+    font-size: 24px;
+}
+.third-cate .arrow button{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: var(--background3);
+    text-align: center;
+    align-content: center;
+    border: none;
+    cursor: pointer;
+}
+.third-cate .brands .brand .image img:hover{
+    box-shadow: 0px 0px 15px black;
+    transition-duration: 0.3s;
+}
+
+/* End of third Categorie */
+/* Start of fourth Categorie */
+
+.fourth-cate{
+    bottom: -641px;
+    position: relative;
+}
+.fourth-cate .header{
+    display: flex;
+    color: var(--text);
+    position: relative;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--border);
+}
+.fourth-cate .header .border::after {
+    content: "";
+    width: 168px;
+    height: 3px;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    display: block;
+    position: absolute;
+}
+.fourth-cate .header .color{
+    color: var(--primary);
+    display: ruby;
+}
+.fourth-cate .categories{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0 50px;
+}
+.fourth-cate .categories .cat{
+    margin-top: 80px;
+}
+.fourth-cate .categories .cat .photo{
+    width: 187px;
+    height: 187px;
+    background-color: var(--background1);
+    border-radius: 16px;
+    align-content: center;
+    text-align-last: center;
+    transition-duration: 0.4s;
+}
+.fourth-cate .categories .cat .text{
+    text-align: center;
+    color: var(--text);
+    margin-top: 20px;
+}
+.fourth-cate .categories .cat .text a{
+    text-decoration: none;
+    color: inherit;
+}
+.fourth-cate .categories .cat .text b{
+    font-size: 20px;
+    color: var(--heading);
+}
+.fourth-cate .categories .cat .photo:hover{
+    outline: 1px solid var(--primary);
+    box-shadow: 0px 0px 15px black;
+    transition-duration: 0.4s;
+    transform: scale(1.1);
+}
+/* End of fourth Categorie */
+/* Start of Fotter */
+.footer{
+    background-color: var(--primary);
+    width: 100%;
+    height: 592px;
+    position: relative;
+    transform: translateY(2413px);
+    color: white;
+    padding-left: 120px;
+    padding-top: 80px;
+    overflow: hidden;
+    display: flex;
+}
+.footer::before{
+    content: "";
+    background-color: #0c9bda;
+    width: 434.49px;
+    height: 434.49px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -103px;
+    right: -103px;
+    border: 15px solid var(--primary);
+    outline: 2px solid #0c9bda;
+}
+.footer .first-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    padding-bottom: 80px;
+    padding-right: 80px;
+}
+.footer .first-column i{
+    color: white;
+}
+.footer .first-column .size{
+    font-size: 20px;
+}
+.footer .first-column .num{
+    font-weight: 600;
+    padding-left: 20px;
+}
+.footer .first-column .text{
+    font-weight: 500;
+}
+.first-column .app .text{
+    font-size: 20px;
+}
+.first-column .app .photos{
+    display: flex;
+    width: 378px;
+    height: 56px;
+    padding-top: 19px;
+    justify-content: space-between;
+}
+.first-column .app .photos .apple, .first-column .app .photos .google{
+    cursor: pointer;
+}
+.footer .second-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    padding-bottom: 80px;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+.footer .second-column .header{ 
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer .second-column .header::before {
+    content: "";
+    border-bottom: 3px solid var(--border);
+    width: 12%;
+    position: absolute;
+    margin-top: 37px;
+}
+.footer .second-column .list{
+    font-weight: 500;
+    width: 161px;
+    height: 296px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 39px;
+    margin-left: 19px;
+}
+.footer .list li a{
+    transition-duration: 0.4s;
+    text-decoration: none;
+    color: white;
+}
+.footer .list li a:hover{
+    color: black;
+    transition-duration: 0.4s;
+}
+.footer .third-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 72%;
+    padding-bottom: 80px;
+    padding-right: 120px;
+}
+.footer .third-column .header{ 
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer .third-column .header::before {
+    content: "";
+    border-bottom: 3px solid var(--border);
+    width: 10%;
+    position: absolute;
+    margin-top: 37px;
+}
+.footer .third-column .list{
+    font-weight: 500;
+    width: 216px;
+    height: 296px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 39px;
+    margin-left: 19px;
+}
+.down{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    transform: translateY(2332px);
+    border-top: 2px solid;
+    padding-top: 30px;
+    width: 87%;
+    color: white;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+/* .parent{
+    height: 100vh;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "chats chats chats chat chat chat chat chat chat chat chat chat"
+        "chats chats chats chat chat chat chat chat chat chat chat chat"
+        "chats chats chats chat chat chat chat chat chat chat chat chat"
+        "chats chats chats chat chat chat chat chat chat chat chat chat"
+        "chats chats chats chat chat chat chat chat chat chat chat chat"
+        "chats chats chats chat chat chat chat chat chat chat chat chat"
+        "chats chats chats chat chat chat chat chat chat chat chat chat"
+        "chats chats chats chat chat chat chat chat chat chat chat chat";
+} */
+/*
+
+    background-repeat: no-repeat;
+    height: 100vh;   for full screen
+
+    margin: 40px auto;
+    font-size: 40px;
+    line-height: 3.5;
+    font-family: "open sans";
+    font-weight: bold;
+    counter-increment: num;
+    content: counter(num);
+.grid div:nth-of-type(1)  to select div wihout class
+    scroll-behavior: smooth;
+     white-space: nowrap;  to make the text in one line
+
+    text-shadow: 2px 0 0 red, 4px 0 0 blue, 8px 0 0 purple;
+    font-size: 50px
+} */
