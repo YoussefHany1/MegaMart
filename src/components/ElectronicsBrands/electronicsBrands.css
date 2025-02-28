@@ -1,0 +1,25 @@
+.elec .header{
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+}
+.elec .brands {
+    /* width: 83%; */
+}
+.elec .brands .brand{
+    & .image{
+        width: max-content !important;
+        & img{
+            transition-duration: 0.3s;
+            &:hover{
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+            }
+        }
+    }
+}
+.elec .brands .back, .elec .brands .forward{
+    color: var(--primary);
+}
+#splide02-track{
+    width: 83%;
+    margin: auto;
+}

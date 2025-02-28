@@ -1,0 +1,31 @@
+.daily .header{
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+}
+.daily .header .color{
+    color: var(--primary);
+}
+.daily .categories .cat{
+    text-align: -webkit-center;
+    & .photo{
+        height: 12rem; 
+        height: 11rem;
+        background-color: var(--background1);
+        transition-duration: 0.3s;
+    }
+}
+.daily .categories .cat .text{
+    color: var(--text);
+    & a{
+        color: inherit;
+    }
+    & b{
+        color: var(--heading);
+    }
+}
+.daily .categories .cat .photo:hover{
+    outline: 1px solid var(--primary);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+}

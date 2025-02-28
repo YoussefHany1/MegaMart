@@ -1,0 +1,18 @@
+.Sidenav{
+    width: 0;
+    background: var(--primary);
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    & .con{
+    & hr{
+        margin: 0 0 0 -16px;
+    }
+        & a{
+            transition-duration: 0.3s;
+            &:hover{
+                padding-left: 15px;
+            }
+        }
+    }
+}
