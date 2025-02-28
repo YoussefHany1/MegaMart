@@ -3,18 +3,33 @@ import './phones.css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import '@splidejs/react-splide/css';
-const PhoneList = () => {
-  const [phones, setPhones] = useState([]);
 
-  useEffect(() => {
-    fetch("https://api.myjson.online/v1/records/006829b3-4ab6-47ad-984d-6011091d7020")
-      .then((response) => response.json())
-      .then((data) => {
-        setPhones(data.data.phones);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+function Phone () {
+    const [phones, setPhones] = useState([]);
 
+    const [error, setError] = useState(null);
+  
+    useEffect(() => {
+      const fetchPhones = async () => {
+        try {
+          const response = await fetch(
+            "https://api.myjson.online/v1/records/006829b3-4ab6-47ad-984d-6011091d7020"
+          );
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          const data = await response.json();
+          setPhones(data.data.phones);
+          setError(null);
+        } catch (err) {
+          setError(`Error fetching data: ${err instanceof Error ? err.message : String(err)}`);
+          console.error("Error fetching data:", err);
+        }
+      };
+      fetchPhones();
+    }, []);
+  
+//   addEventListener("DOMContentLoaded", useEffect());
   return (
     <section className="smartPhones my-5 pt-3">
         <div className="header d-flex justify-content-between fw-bold">
@@ -55,4 +70,4 @@ const PhoneList = () => {
   );
 };
 
-export default PhoneList;
+export default Phone;
